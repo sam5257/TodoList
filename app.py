@@ -24,6 +24,9 @@ def index():
     return render_template('index.html',incomplete=incomplete,complete=complete)
 #Flask will try to find the HTML file in the templates folder, in the same folder in which this script is present.
 
+#https://realpython.com/primer-on-jinja-templating/
+
+
 ###Adding items
 @app.route('/add',methods=['POST'])
 def add():
