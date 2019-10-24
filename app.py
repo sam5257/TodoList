@@ -24,7 +24,6 @@ def index():
     return render_template('index.html',incomplete=incomplete,complete=complete)
 #Flask will try to find the HTML file in the templates folder, in the same folder in which this script is present.
 
-
 ###Adding items
 @app.route('/add',methods=['POST'])
 def add():
@@ -42,4 +41,4 @@ def complete(id):
         return redirect(url_for('index'))
 
 if(__name__=='__main__'):
-    app.run(debug=True)
+    app.run(ssl_context='adhoc')
